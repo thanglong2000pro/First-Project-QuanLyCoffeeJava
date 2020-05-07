@@ -1,4 +1,4 @@
 1.Import CSDL trong thư mục database vào SQL Server
 2.Set lại cấu hình trong class JDBCConnection.java nằm trong package DAO theo cấu hình SQL Server trên máy của bạn
 3.Import các thư viện trong thư mục lib vào nếu gặp lỗi thiếu thư viện
-4.Chạy QLBHoop16 trong thư mục dist, nếu gặp lỗi không đăng nhập được thì xóa file đi và vào Netbeans Build lại và chạy
+4.Chạy QLBHoop16 trong thư mục run, nếu gặp lỗi không đăng nhập được thì xóa file đi và vào Netbeans Build lại và chạy
