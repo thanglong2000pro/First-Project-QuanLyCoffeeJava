@@ -124,6 +124,64 @@ public class UserDAO {
         }
     }
 
+    public void updateUserEA(User user) {
+        try {
+            Connection connection = getConnection();
+            String sql = "UPDATE Useroop SET FullName =? ,Gender=?,Dob=?,Address=?,"
+                    + "Phone=?,UserName=?,Password=? , Role =? WHERE IDUser =?";
+
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(9, user.getIDUser());
+            ps.setString(1, user.getFullName());
+            ps.setString(2, user.getGender());
+            ps.setString(3, user.getDob());
+            ps.setString(5, user.getPhone());
+            ps.setString(4, user.getAddress());
+            ps.setString(6, user.getUserName());
+            ps.setString(7, user.getPassword());
+            ps.setString(8, user.getRole());
+            int rs = ps.executeUpdate();
+            String sql0 = "DELETE FROM SalaryEmployee WHERE IDUser = ? ";
+
+            PreparedStatement ps0 = connection.prepareStatement(sql0);
+            ps0.setInt(1, user.getIDUser());
+            int rs0 = ps0.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    public void updateUserAE(User user) {
+        try {
+            Connection connection = getConnection();
+            String sql = "UPDATE Useroop SET FullName =? ,Gender=?,Dob=?,Address=?,"
+                    + "Phone=?,UserName=?,Password=? , Role =? WHERE IDUser =?";
+
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(9, user.getIDUser());
+            ps.setString(1, user.getFullName());
+            ps.setString(2, user.getGender());
+            ps.setString(3, user.getDob());
+            ps.setString(5, user.getPhone());
+            ps.setString(4, user.getAddress());
+            ps.setString(6, user.getUserName());
+            ps.setString(7, user.getPassword());
+            ps.setString(8, user.getRole());
+            int rs = ps.executeUpdate();
+            String sql0 = "INSERT INTO SalaryEmployee (IDUser,Month) VALUES (?,?)";
+            for (int i = 1; i < 13; i++) {
+                PreparedStatement ps0 = connection.prepareStatement(sql0);
+                ps0.setInt(1, user.getIDUser());
+                ps0.setInt(2, i);
+                int rs0 = ps0.executeUpdate();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
     public void updateUser(User user) {
         try {
             Connection connection = getConnection();
@@ -141,23 +199,6 @@ public class UserDAO {
             ps.setString(7, user.getPassword());
             ps.setString(8, user.getRole());
             int rs = ps.executeUpdate();
-            if (user.getRole().equals("Employee")) {
-                String sql0 = "INSERT INTO SalaryEmployee (IDUser,Month) VALUES (?,?)";
-                for (int i = 1; i < 13; i++) {
-                    PreparedStatement ps0 = connection.prepareStatement(sql0);
-                    ps0.setInt(1, user.getIDUser());
-                    ps0.setInt(2, i);
-                    int rs0 = ps0.executeUpdate();
-                }
-            } else {
-                String sql0 = "DELETE FROM SalaryEmployee WHERE IDUser = ? ";
-                
-                    PreparedStatement ps0 = connection.prepareStatement(sql0);
-                    ps0.setInt(1, user.getIDUser());
-                    int rs0 = ps0.executeUpdate();
-                
-            }
-
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
         }

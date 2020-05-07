@@ -67,6 +67,11 @@ public class GuestDAO {
     public void removeGuest(String IDGuest){
       try {
             Connection connection = getConnection();
+            String sql = "DELETE FROM Orderoop WHERE IDGuest = ? ";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, IDGuest);
+            int rs = ps.executeUpdate();
+            
             String sql1 = "DELETE FROM Guest WHERE IDGuest = ? ";
             PreparedStatement ps1 = connection.prepareStatement(sql1);
             ps1.setString(1, IDGuest);
@@ -122,5 +127,46 @@ public class GuestDAO {
         }
 
         return null;
+    }
+      public Guest getGuestsByPhone(String phone) {
+        Guest g = new Guest();
+        try {
+
+            String sql = "SELECT * FROM Guest WHERE phone =? ";
+            Connection connection = getConnection();
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, phone);
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                g.setIDGuest(resultSet.getInt("IDGuest"));
+                g.setName(resultSet.getString("name"));
+                g.setPhone(resultSet.getString("phone"));
+                g.setAccumulatedPoints(resultSet.getInt("accumulatedPoints"));   
+            }
+            
+            return g;
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+      
+      public void addGuest(Guest g) {
+        try {
+            Connection connection = getConnection();
+
+            String sql = "INSERT INTO Guest (IDguest,name,phone,accumulatedPoints)"
+                    + " VALUES (?,?,?,?)";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, g.getIDGuest());
+            ps.setString(2, g.getName());
+            ps.setString(3, g.getPhone());
+            ps.setInt(4, g.getAccumulatedPoints());
+            int rs = ps.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 }

@@ -49,13 +49,13 @@
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="addGoodsButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
-                      <Component id="removeGoodsButton4" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
-                      <Component id="editGoodsButton3" min="-2" pref="62" max="-2" attributes="0"/>
+                      <Component id="addGoodsButton" min="-2" pref="80" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                      <Component id="removeGoodsButton4" min="-2" pref="80" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="RefeshButton5" min="-2" max="-2" attributes="0"/>
+                      <Component id="editGoodsButton3" min="-2" pref="80" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                      <Component id="RefeshButton5" min="-2" pref="80" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="22" max="32767" attributes="0"/>
@@ -70,12 +70,12 @@
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="removeGoodsButton4" pref="38" max="32767" attributes="0"/>
                   <Component id="addGoodsButton" alignment="1" max="32767" attributes="0"/>
                   <Component id="RefeshButton5" alignment="1" max="32767" attributes="0"/>
-                  <Component id="editGoodsButton3" alignment="1" max="32767" attributes="0"/>
+                  <Component id="removeGoodsButton4" alignment="1" pref="38" max="32767" attributes="0"/>
+                  <Component id="editGoodsButton3" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -209,12 +209,12 @@
                       <Editor/>
                       <Renderer/>
                     </Column>
-                    <Column maxWidth="100" minWidth="100" prefWidth="100" resizable="true">
+                    <Column maxWidth="200" minWidth="200" prefWidth="200" resizable="true">
                       <Title/>
                       <Editor/>
                       <Renderer/>
                     </Column>
-                    <Column maxWidth="-1" minWidth="70" prefWidth="70" resizable="true">
+                    <Column maxWidth="90" minWidth="90" prefWidth="90" resizable="true">
                       <Title/>
                       <Editor/>
                       <Renderer/>

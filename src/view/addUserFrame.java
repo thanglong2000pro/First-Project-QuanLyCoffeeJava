@@ -324,6 +324,7 @@ public class addUserFrame extends javax.swing.JFrame {
                 user.setFullName(fullNameTextField.getText());
                 String a = String.valueOf(genderComboBox.getSelectedItem());
                 user.setGender(a);
+                DOBDateChooser.setDateFormatString("yyyy-MM-dd");
                 user.setDob(((JTextField) DOBDateChooser.getDateEditor().getUiComponent()).getText());
                 user.setAddress(addressTextField.getText());
                 user.setPhone(phoneTextField.getText());

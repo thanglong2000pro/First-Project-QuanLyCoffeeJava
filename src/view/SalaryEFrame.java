@@ -39,7 +39,7 @@ public class SalaryEFrame extends javax.swing.JFrame {
             fullNameTextField.setText(e.getFullName());
             defaultTableModel.addRow(new Object[]{e.getMonth(),
                   e.getShift(), e.getTotalShiftOnMonth(), 
-                 e.getMoneyShift(), e.getBonus(),a
+                 e.getMoneyShift(), e.getBonus(),a+"đ"
                });
         });
 

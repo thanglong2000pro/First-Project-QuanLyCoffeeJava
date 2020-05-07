@@ -29,4 +29,10 @@ public class GuestService {
    public Guest getGuestsByID(int ID){
        return guestDAO.getGuestsByID(ID);
    }
+   public Guest getGuestsByPhone(String phone){
+       return guestDAO.getGuestsByPhone(phone);
+   }
+   public  void addGuest(Guest g){
+       guestDAO.addGuest(g);
+   }
 }

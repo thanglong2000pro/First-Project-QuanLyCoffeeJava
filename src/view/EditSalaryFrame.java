@@ -221,7 +221,7 @@ public class EditSalaryFrame extends javax.swing.JFrame {
             user.setShift(ShiftTextField.getText());
             user.setBonus(Integer.valueOf(BonusTextField.getText()));
             user.setMoneyShift(Integer.valueOf(tien1caTextField1.getText()));
-            user.setMoneyShift(Integer.valueOf(tien1caTextField1.getText()));
+            user.setTotalShiftOnMonth(Integer.valueOf(TotalShiftTextField.getText()));
             user.setMonth(Integer.valueOf(MonthTextField.getText()));
             
             userService.updateSalary(user);

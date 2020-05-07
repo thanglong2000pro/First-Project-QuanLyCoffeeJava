@@ -20,7 +20,7 @@ public class editUserFrame extends javax.swing.JFrame {
     User user;
     User u;
     UserService userService;
-
+    String role;
     /**
      * Creates new form editEmployeeFrame
      */
@@ -42,9 +42,11 @@ public class editUserFrame extends javax.swing.JFrame {
         }
         if (user.getRole().equals("Admin")) {
             AdminRadiobutton.setSelected(true);
+            role = "Admin";
         }
         if(user.getRole().equals("Employee")){
             EmployeeRadioButton.setSelected(true);
+            role = "Employee";
         }
         
         DOBTextField.setText(user.getDob());
@@ -319,12 +321,20 @@ public class editUserFrame extends javax.swing.JFrame {
                 user.setPassword(passwordTextField.getText());
                 if (AdminRadiobutton.isSelected()) {
                     user.setRole("Admin");
+                    if(role.equals("Admin")){
+                        userService.updateUser(user);
+                    }else{
+                       userService.updateUserEA(user); 
+                    }
                 }
                 if (EmployeeRadioButton.isSelected()) {
                     user.setRole("Employee");
+                    if(role.equals("Employee")){
+                        userService.updateUser(user);
+                    }else{
+                       userService.updateUserAE(user); 
+                    }
                 }
-
-                userService.updateUser(user);
 
                 JOptionPane.showMessageDialog(rootPane, "Sửa Thành Công!");
                 new ListUserFrame(u.getIDUser()).setVisible(true);

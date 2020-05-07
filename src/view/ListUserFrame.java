@@ -125,6 +125,7 @@ public class ListUserFrame extends javax.swing.JFrame {
             UserTable.getColumnModel().getColumn(8).setMaxWidth(80);
         }
 
+        addEButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         addEButton.setText("Thêm");
         addEButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,6 +133,7 @@ public class ListUserFrame extends javax.swing.JFrame {
             }
         });
 
+        EditEButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         EditEButton.setText("Sửa");
         EditEButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,6 +141,7 @@ public class ListUserFrame extends javax.swing.JFrame {
             }
         });
 
+        removeEButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         removeEButton.setText("Xóa");
         removeEButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,6 +149,7 @@ public class ListUserFrame extends javax.swing.JFrame {
             }
         });
 
+        refeshButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         refeshButton.setText("Refesh");
         refeshButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,19 +166,19 @@ public class ListUserFrame extends javax.swing.JFrame {
                     .addComponent(jSeparator1)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(BackButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 221, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(addEButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(115, 115, 115)
-                                .addComponent(EditEButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 156, Short.MAX_VALUE)
-                                .addComponent(removeEButton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(142, 142, 142)
-                                .addComponent(refeshButton))
+                                .addComponent(addEButton, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(90, 90, 90)
+                                .addComponent(EditEButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(removeEButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(94, 94, 94)
+                                .addComponent(refeshButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1))))
                 .addContainerGap())
         );
@@ -261,16 +265,7 @@ public class ListUserFrame extends javax.swing.JFrame {
         new MenuAdminFrame(user.getIDUser()).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BackButtonActionPerformed
-//    public static void main(String args[]) {
-//      
-//        java.awt.EventQueue.invokeLater(() -> {
-//            new ListUserFrame().setVisible(true);
-//        });
-//    }
 
-    /**
-     * @param args the command line arguments
-     */
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

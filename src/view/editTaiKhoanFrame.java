@@ -19,6 +19,7 @@ public class editTaiKhoanFrame extends javax.swing.JFrame {
 
     User user;
     UserService userService;
+
     public editTaiKhoanFrame(int IDuser) {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -28,20 +29,19 @@ public class editTaiKhoanFrame extends javax.swing.JFrame {
         dobTextField.setText(user.getDob());
         addressTextField.setText(user.getAddress());
         PhoneTextField.setText(user.getPhone());
-        String b = user.getGender().replaceAll("\\s","");        
-        if (b.equals("Nam")) {           
+        String b = user.getGender().replaceAll("\\s", "");
+        if (b.equals("Nam")) {
             NamRadioButton.setSelected(true);
         }
         if (b.equals("Nữ")) {
-            
+
             NuRadioButton.setSelected(true);
         }
-        if(b.equals("Khác")){
+        if (b.equals("Khác")) {
             KhacRadioButton.setSelected(true);
         }
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -241,34 +241,48 @@ public class editTaiKhoanFrame extends javax.swing.JFrame {
                 || addressTextField.getText().equals("")
                 || PhoneTextField.getText().equals("")) {
             JOptionPane.showMessageDialog(rootPane, "Vui lòng nhập đầy đủ thông tin!");
-           
+
         } else {
             String pattern = "^0\\d{9}$";
             Pattern r = Pattern.compile(pattern);
+            String p = "^\\d{4}-\\d{2}-\\d{2}$";
+            Pattern r1 = Pattern.compile(p);
             Matcher m = r.matcher(PhoneTextField.getText());
+            Matcher m1 = r1.matcher(dobTextField.getText());
+
             if (m.find()) {
+                if (m1.find()) {
+                    String a[] = dobTextField.getText().split("-");
+                    int b = Integer.valueOf(a[1]);
+                    int c = Integer.valueOf(a[2]);
+                    if (b > 0 && b < 13 && c > 0 && c < 32) {
+                        user.setFullName(FullNameTextField.getText());
 
-                user.setFullName(FullNameTextField.getText());
-                
-                if (NamRadioButton.isSelected()) {
-                    user.setGender("Nam");
+                        if (NamRadioButton.isSelected()) {
+                            user.setGender("Nam");
+                        }
+                        if (NuRadioButton.isSelected()) {
+                            user.setGender("Nữ");
+                        }
+                        if (KhacRadioButton.isSelected()) {
+                            user.setGender("Khác");
+                        }
+
+                        user.setDob(dobTextField.getText());
+                        user.setAddress(addressTextField.getText());
+                        user.setPhone(PhoneTextField.getText());
+
+                        userService.updateUser(user);
+
+                        JOptionPane.showMessageDialog(rootPane, "Sửa Thành Công!");
+                        new MenuAdminFrame(user.getIDUser()).setVisible(true);
+                        this.dispose();
+                    } else {
+                        JOptionPane.showMessageDialog(rootPane, "Ngày Sinh không hợp lệ!");
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(rootPane, "Ngày Sinh không hợp lệ!");
                 }
-                if (NuRadioButton.isSelected()) {
-                    user.setGender("Nữ");
-                }
-                if (KhacRadioButton.isSelected()) {
-                    user.setGender("Khác");
-                }
-
-                user.setDob(dobTextField.getText());
-                user.setAddress(addressTextField.getText());
-                user.setPhone(PhoneTextField.getText());
-
-                userService.updateUser(user);
-
-                JOptionPane.showMessageDialog(rootPane, "Sửa Thành Công!");
-                new MenuAdminFrame(user.getIDUser()).setVisible(true);
-                this.dispose();
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Số Điện Thoại không hợp lệ!");
             }
@@ -278,7 +292,6 @@ public class editTaiKhoanFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField FullNameTextField;

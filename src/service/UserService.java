@@ -26,6 +26,12 @@ public class UserService {
         userDAO.addUser(user);
     }
 
+    public void updateUserAE(User u) {
+        userDAO.updateUserAE(u);
+    }
+    public void updateUserEA(User u) {
+        userDAO.updateUserEA(u);
+    }
     public void updateUser(User u) {
         userDAO.updateUser(u);
     }

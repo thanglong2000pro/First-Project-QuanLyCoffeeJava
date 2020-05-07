@@ -7,50 +7,16 @@ package model;
 
 /**
  *
- * @author THANG LONG
+ * @author SON.TH183823
  */
 public class Order {
-    private int IDOrder;
-    private String nameDrink;
-    private double price;
-    private int amount;
-    private String nameUser;
-    private String nameGuest;
-    private String note;
-    private int tableNumber;
-    private String date;
 
-    public double getPrice() {
-        return price;
-    }
+    private int IDOrder, IDDrinks, IDUser, IDGuest, amount, TableNumber;
+    private String note, Date;
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public Order(int IDOrder, String nameDrink, double price, int amount, String nameUser, String nameGuest, String note, int tableNumber, String date) {
-        this.IDOrder = IDOrder;
-        this.nameDrink = nameDrink;
-        this.price = price;
-        this.amount = amount;
-        this.nameUser = nameUser;
-        this.nameGuest = nameGuest;
-        this.note = note;
-        this.tableNumber = tableNumber;
-        this.date = date;
-    }
-
-
+    
 
    
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
 
     public int getIDOrder() {
         return IDOrder;
@@ -60,37 +26,52 @@ public class Order {
         this.IDOrder = IDOrder;
     }
 
-    public String getNameDrink() {
-        return nameDrink;
+    public String getDate() {
+        return Date;
     }
 
-    public void setNameDrink(String nameDrink) {
-        this.nameDrink = nameDrink;
+    public void setDate(String Date) {
+        this.Date = Date;
     }
 
-    public String getNameUser() {
-        return nameUser;
+    public int getIDDrinks() {
+        return IDDrinks;
     }
 
-    public void setNameUser(String nameUser) {
-        this.nameUser = nameUser;
+    public void setIDDrinks(int IDDrinks) {
+        this.IDDrinks = IDDrinks;
     }
 
-    public String getNameGuest() {
-        return nameGuest;
+    public int getIDUser() {
+        return IDUser;
     }
 
-    public void setNameGuest(String nameGuest) {
-        this.nameGuest = nameGuest;
+    public void setIDUser(int IDUser) {
+        this.IDUser = IDUser;
     }
 
-   
+    public int getIDGuest() {
+        return IDGuest;
+    }
+
+    public void setIDGuest(int IDGuest) {
+        this.IDGuest = IDGuest;
+    }
+
     public int getAmount() {
         return amount;
     }
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    public int getTableNumber() {
+        return TableNumber;
+    }
+
+    public void setTableNumber(int TableNumber) {
+        this.TableNumber = TableNumber;
     }
 
     public String getNote() {
@@ -101,17 +82,30 @@ public class Order {
         this.note = note;
     }
 
-    public int getTableNumber() {
-        return tableNumber;
+    public Order() {
     }
 
-    public void setTableNumber(int tableNumber) {
-        this.tableNumber = tableNumber;
+    public Order(int IDDrinks, int IDUser, int IDGuest, int amount,
+            int TableNumber, String note) {
+        this.IDDrinks = IDDrinks;
+        this.IDUser = IDUser;
+        this.IDGuest = IDGuest;
+        this.amount = amount;
+        this.TableNumber = TableNumber;
+        this.note = note;
     }
-    public Order()
-    {
+
+    public Order(int IDOrder, int IDDrinks, int IDUser, String date,
+            int IDGuest, int amount, int TableNumber, String note ) {
+        this.IDOrder = IDOrder;
+        this.IDDrinks = IDDrinks;
+        this.IDUser = IDUser;
+        this.IDGuest = IDGuest;
+        this.amount = amount;
+        this.TableNumber = TableNumber;
+        this.note = note;
+        this.Date = date;
         
     }
 
-  
 }

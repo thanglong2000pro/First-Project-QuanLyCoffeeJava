@@ -16,4 +16,22 @@ public class DrinksService {
     public List<Drinks> getAllDrinks() {
         return drinksDAO.getAllDrinks();
     }
+    public List<Drinks> getDrinksByName(String name) {
+        return drinksDAO.getDrinksByName(name);
+    }
+    
+    public void updateDrinks(Drinks g) {
+        drinksDAO.updateDrinks(g);
+    }
+    
+    public  void addDrinks(Drinks d){
+       drinksDAO.addDrinks(d);
+   }
+    
+    public  void removeDrinks(String IDDrinks){
+       drinksDAO.removeDrinks(IDDrinks);
+   }
+    public Drinks getDrinksByID(int ID) {
+        return drinksDAO.getDrinksByID(ID);
+    }
 }

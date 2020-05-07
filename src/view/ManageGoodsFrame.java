@@ -31,7 +31,7 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
         goodses.forEach((goods) -> {
             int TotalMoney = goods.getAmount()*goods.getPrice();
             defaultTableModel.addRow(new Object[]{goods.getIDGoods(),goods.getNameGoods(),
-                goods.getPrice(),goods.getAmount(),goods.getImportDate(),TotalMoney});
+                goods.getPrice()+"đ",goods.getAmount(),goods.getImportDate(),TotalMoney+"đ"});
         });
        
     }
@@ -153,11 +153,12 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
             GoodsTable1.getColumnModel().getColumn(0).setMinWidth(50);
             GoodsTable1.getColumnModel().getColumn(0).setPreferredWidth(50);
             GoodsTable1.getColumnModel().getColumn(0).setMaxWidth(50);
-            GoodsTable1.getColumnModel().getColumn(1).setMinWidth(100);
-            GoodsTable1.getColumnModel().getColumn(1).setPreferredWidth(100);
-            GoodsTable1.getColumnModel().getColumn(1).setMaxWidth(100);
-            GoodsTable1.getColumnModel().getColumn(2).setMinWidth(70);
-            GoodsTable1.getColumnModel().getColumn(2).setPreferredWidth(70);
+            GoodsTable1.getColumnModel().getColumn(1).setMinWidth(200);
+            GoodsTable1.getColumnModel().getColumn(1).setPreferredWidth(200);
+            GoodsTable1.getColumnModel().getColumn(1).setMaxWidth(200);
+            GoodsTable1.getColumnModel().getColumn(2).setMinWidth(90);
+            GoodsTable1.getColumnModel().getColumn(2).setPreferredWidth(90);
+            GoodsTable1.getColumnModel().getColumn(2).setMaxWidth(90);
             GoodsTable1.getColumnModel().getColumn(3).setMinWidth(70);
             GoodsTable1.getColumnModel().getColumn(3).setPreferredWidth(70);
             GoodsTable1.getColumnModel().getColumn(3).setMaxWidth(70);
@@ -230,13 +231,13 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(addGoodsButton)
-                        .addGap(129, 129, 129)
-                        .addComponent(removeGoodsButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(129, 129, 129)
-                        .addComponent(editGoodsButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(addGoodsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(96, 96, 96)
+                        .addComponent(removeGoodsButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(RefeshButton5)))
+                        .addComponent(editGoodsButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(92, 92, 92)
+                        .addComponent(RefeshButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -247,9 +248,9 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(removeGoodsButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                     .addComponent(addGoodsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(RefeshButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(removeGoodsButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                     .addComponent(editGoodsButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -289,7 +290,7 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
             goodses.forEach((goods) -> {
             int TotalMoney = goods.getAmount()*goods.getPrice();
             defaultTableModel.addRow(new Object[]{goods.getIDGoods(),goods.getNameGoods(),
-                goods.getPrice(),goods.getAmount(),goods.getImportDate(),TotalMoney});
+                goods.getPrice()+"đ",goods.getAmount(),goods.getImportDate(),TotalMoney});
         });
         }
     }//GEN-LAST:event_searchGoodsButtonActionPerformed
@@ -301,7 +302,7 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
         goodses.forEach((goods) -> {
             int TotalMoney = goods.getAmount()*goods.getPrice();
             defaultTableModel.addRow(new Object[]{goods.getIDGoods(),goods.getNameGoods(),
-                goods.getPrice(),goods.getAmount(),goods.getImportDate(),TotalMoney});
+                goods.getPrice()+"đ",goods.getAmount(),goods.getImportDate(),TotalMoney+"đ"});
         });
     }//GEN-LAST:event_RefeshButton5ActionPerformed
 

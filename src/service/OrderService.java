@@ -5,23 +5,34 @@
  */
 package service;
 
-
 import dao.OrderDAO;
 import java.util.List;
 import model.Order;
-
 /**
  *
- * @author THANG LONG
+ * @author SON.TH183823
  */
 public class OrderService {
-    private  OrderDAO orderDAO = new OrderDAO();
-    
-    public List<Order> getAllOrder() {
+    private OrderDAO orderDAO = new OrderDAO();
+    public List<Order> getAllOrder(){
         return orderDAO.getAllOrder();
     }
-    public Order getOrderByID(int IDOrder) {
-
-        return orderDAO.getOrderByID(IDOrder);
+    public List<Order> getOrderByID(int IDOrder){
+        return  orderDAO.getOrderByID(IDOrder);
     }
+    public void addOrder(Order o){
+        orderDAO.addOrder(o);
+    }
+    public void updateOrder(Order o){
+        orderDAO.updateOrder(o);
+    }
+    public  void removeOrder(String IDOrder){
+        orderDAO.removeOder(IDOrder);
+    }
+    public  void removeDrinks(String IDDrinks){
+        orderDAO.removeDrinks(IDDrinks);
+    }
+//    public int getMaxIDOrder(){
+//        return  orderDAO.getmaxIDOrder();
+//    }
 }
