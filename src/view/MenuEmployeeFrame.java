@@ -298,7 +298,7 @@ public class MenuEmployeeFrame extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel12.setText("Số Bàn");
 
-        Refesh.setText("Refesh");
+        Refesh.setText("Refresh");
         Refesh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RefeshActionPerformed(evt);

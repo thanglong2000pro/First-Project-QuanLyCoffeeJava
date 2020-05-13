@@ -122,7 +122,7 @@ public class ListEmployeeFrame extends javax.swing.JFrame {
             }
         });
 
-        refeshButton.setText("Refesh");
+        refeshButton.setText("Refresh");
         refeshButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refeshButtonActionPerformed(evt);

@@ -221,7 +221,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="refeshButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Refesh"/>
+            <Property name="text" type="java.lang.String" value="Refresh"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="refeshButtonActionPerformed"/>

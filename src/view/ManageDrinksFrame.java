@@ -68,6 +68,7 @@ public class ManageDrinksFrame extends javax.swing.JFrame {
         jButton3.setText("jButton3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Quản lý Đồ uống");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -201,7 +202,7 @@ public class ManageDrinksFrame extends javax.swing.JFrame {
             }
         });
 
-        refeshButton6.setText("Refesh");
+        refeshButton6.setText("Refresh");
         refeshButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refeshButton6ActionPerformed(evt);

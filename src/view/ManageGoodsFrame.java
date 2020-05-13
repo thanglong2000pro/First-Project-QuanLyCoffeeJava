@@ -74,6 +74,7 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Quản lý Hàng hóa");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel1.setText("Quản Lý Hàng Hóa");
@@ -193,7 +194,7 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        RefeshButton5.setText("Refesh");
+        RefeshButton5.setText("Refresh");
         RefeshButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RefeshButton5ActionPerformed(evt);

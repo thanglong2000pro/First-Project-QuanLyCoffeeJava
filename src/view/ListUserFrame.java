@@ -80,7 +80,7 @@ public class ListUserFrame extends javax.swing.JFrame {
                 java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, true, false
+                false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -118,7 +118,6 @@ public class ListUserFrame extends javax.swing.JFrame {
             UserTable.getColumnModel().getColumn(6).setMinWidth(80);
             UserTable.getColumnModel().getColumn(6).setPreferredWidth(80);
             UserTable.getColumnModel().getColumn(6).setMaxWidth(80);
-            UserTable.getColumnModel().getColumn(7).setResizable(false);
             UserTable.getColumnModel().getColumn(7).setPreferredWidth(75);
             UserTable.getColumnModel().getColumn(8).setMinWidth(80);
             UserTable.getColumnModel().getColumn(8).setPreferredWidth(80);
@@ -150,7 +149,7 @@ public class ListUserFrame extends javax.swing.JFrame {
         });
 
         refeshButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        refeshButton.setText("Refesh");
+        refeshButton.setText("Refresh");
         refeshButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refeshButtonActionPerformed(evt);
