@@ -9,10 +9,7 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import model.Drinks;
 import service.DrinksService;
-/**
- *
- * @author SON.TH183823
- */
+
 public class editDrinksFrame extends javax.swing.JFrame {
 
     /**

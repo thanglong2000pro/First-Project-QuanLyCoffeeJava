@@ -12,10 +12,7 @@ import javax.swing.JOptionPane;
 import model.Drinks;
 import service.DrinksService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class addDrinksFrame extends javax.swing.JFrame {
 
     Drinks drinks;

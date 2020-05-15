@@ -8,10 +8,7 @@ package view;
 import model.User;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class ThanhVienFrame extends javax.swing.JFrame {
 
     /**

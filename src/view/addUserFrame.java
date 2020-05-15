@@ -8,10 +8,7 @@ import javax.swing.JTextField;
 import model.User;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class addUserFrame extends javax.swing.JFrame {
 
     User user;

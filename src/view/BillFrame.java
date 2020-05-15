@@ -18,10 +18,7 @@ import service.GuestService;
 import service.OrderService;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class BillFrame extends javax.swing.JFrame {
 
     /**

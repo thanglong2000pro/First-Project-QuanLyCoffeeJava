@@ -11,10 +11,7 @@ import javax.swing.table.DefaultTableModel;
 import model.User;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class ListEmployeeFrame extends javax.swing.JFrame {
     DefaultTableModel defaultTableModel;
     UserService userService;

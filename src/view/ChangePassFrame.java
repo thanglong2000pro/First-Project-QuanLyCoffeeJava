@@ -9,10 +9,7 @@ import javax.swing.JOptionPane;
 import model.User;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class ChangePassFrame extends javax.swing.JFrame {
 
     User user;

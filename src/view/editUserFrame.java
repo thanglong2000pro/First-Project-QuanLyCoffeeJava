@@ -11,10 +11,7 @@ import javax.swing.JOptionPane;
 import model.User;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class editUserFrame extends javax.swing.JFrame {
 
     User user;

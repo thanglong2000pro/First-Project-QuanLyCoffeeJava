@@ -23,10 +23,7 @@ import service.LDCService;
 import service.OrderService;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class MenuEmployeeFrame extends javax.swing.JFrame {
 
     User user;

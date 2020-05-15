@@ -24,10 +24,7 @@ import service.LDCService;
 import service.OrderService;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class MenuAdminFrame extends javax.swing.JFrame {
 
     User user;
