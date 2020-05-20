@@ -5,10 +5,7 @@
  */
 package model;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class Bill {
     private int IDOrder , doanhThu;
     private String date;

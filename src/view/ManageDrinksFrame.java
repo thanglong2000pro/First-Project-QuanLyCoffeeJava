@@ -13,10 +13,7 @@ import model.User;
 import service.DrinksService;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class ManageDrinksFrame extends javax.swing.JFrame {
 
     /**

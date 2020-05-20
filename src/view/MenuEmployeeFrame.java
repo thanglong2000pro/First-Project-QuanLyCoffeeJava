@@ -23,10 +23,7 @@ import service.LDCService;
 import service.OrderService;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class MenuEmployeeFrame extends javax.swing.JFrame {
 
     User user;
@@ -111,10 +108,8 @@ public class MenuEmployeeFrame extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel18 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         ManageDrinksjButton = new javax.swing.JButton();
         jLabel23 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -377,18 +372,6 @@ public class MenuEmployeeFrame extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh Sách", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Times New Roman", 1, 24))); // NOI18N
         jPanel1.setLayout(null);
 
-        jButton1.setBackground(new java.awt.Color(255, 216, 148));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/employeequanly.png"))); // NOI18N
-        jButton1.setText("Quản Lý Nhân Viên");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(20, 50, 400, 80);
-
         jButton2.setBackground(new java.awt.Color(255, 216, 148));
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/guest.png"))); // NOI18N
@@ -399,7 +382,7 @@ public class MenuEmployeeFrame extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(475, 170, 380, 80);
+        jButton2.setBounds(40, 160, 800, 80);
 
         jButton3.setBackground(new java.awt.Color(255, 216, 148));
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -411,19 +394,7 @@ public class MenuEmployeeFrame extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(20, 168, 400, 80);
-
-        jButton4.setBackground(new java.awt.Color(255, 216, 148));
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/user.png"))); // NOI18N
-        jButton4.setText("Quản Lý User");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton4);
-        jButton4.setBounds(20, 280, 843, 80);
+        jButton3.setBounds(40, 270, 800, 80);
 
         ManageDrinksjButton.setBackground(new java.awt.Color(255, 216, 148));
         ManageDrinksjButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -435,7 +406,7 @@ public class MenuEmployeeFrame extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ManageDrinksjButton);
-        ManageDrinksjButton.setBounds(475, 50, 380, 80);
+        ManageDrinksjButton.setBounds(40, 50, 800, 80);
 
         jLabel23.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel23.setText("Danh Sách");
@@ -830,11 +801,6 @@ public class MenuEmployeeFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nameListMouseEntered
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new ListEmployeeFrame(user.getIDUser()).setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         new ManageGuestFrame(user.getIDUser()).setVisible(true);
         this.dispose();
@@ -844,11 +810,6 @@ public class MenuEmployeeFrame extends javax.swing.JFrame {
         new ManageGoodsFrame(user.getIDUser()).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        new ListUserFrame(user.getIDUser()).setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void ManageDrinksjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManageDrinksjButtonActionPerformed
         new ManageDrinksFrame(user.getIDUser()).setVisible(true);
@@ -898,10 +859,8 @@ public class MenuEmployeeFrame extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel dobLabel4;
     private javax.swing.JButton editInforButton;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

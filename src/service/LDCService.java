@@ -11,10 +11,7 @@ import dao.LDCDAO;
 import java.util.List;
 import model.LDC;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class LDCService {
     private  LDCDAO ldcdao = new LDCDAO();
     public  void addDrinks(LDC ldc ){

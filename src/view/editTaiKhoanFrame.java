@@ -11,10 +11,7 @@ import javax.swing.JOptionPane;
 import model.User;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class editTaiKhoanFrame extends javax.swing.JFrame {
 
     User user;
@@ -173,7 +170,7 @@ public class editTaiKhoanFrame extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(24, 34, 367, 160);
+        jPanel1.setBounds(24, 34, 392, 160);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Sửa thông tin");

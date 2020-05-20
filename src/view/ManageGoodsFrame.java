@@ -9,10 +9,7 @@ import model.User;
 import service.GoodsService;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class ManageGoodsFrame extends javax.swing.JFrame {
     Goods goods;
     GoodsService goodsService;

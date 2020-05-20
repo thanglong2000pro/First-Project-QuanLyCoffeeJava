@@ -5,10 +5,6 @@
  */
 package model;
 
-/**
- *
- * @author SON.TH183823
- */
 public class Order {
 
     private int IDOrder, IDDrinks, IDUser, IDGuest, amount, TableNumber;

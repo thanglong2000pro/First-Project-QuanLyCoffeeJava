@@ -8,10 +8,7 @@ import javax.swing.JTextField;
 import model.User;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class addUserFrame extends javax.swing.JFrame {
 
     User user;
@@ -280,7 +277,7 @@ public class addUserFrame extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(10, 48, 501, 220);
+        jPanel1.setBounds(10, 48, 510, 220);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(100, 32, 340, 10);
 

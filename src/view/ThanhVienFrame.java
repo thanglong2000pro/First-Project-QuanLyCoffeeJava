@@ -8,10 +8,7 @@ package view;
 import model.User;
 import service.UserService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class ThanhVienFrame extends javax.swing.JFrame {
 
     /**
@@ -199,7 +196,7 @@ public class ThanhVienFrame extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 680, 673);
+        jPanel1.setBounds(0, 0, 680, 674);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

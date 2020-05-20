@@ -17,10 +17,7 @@ import java.util.logging.Logger;
 import model.Bill;
 import model.Drinks;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class BillDAO {
     public List<Bill> getAllBills() {
         List<Bill> listBill = new ArrayList<>();

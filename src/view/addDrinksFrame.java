@@ -12,10 +12,7 @@ import javax.swing.JOptionPane;
 import model.Drinks;
 import service.DrinksService;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class addDrinksFrame extends javax.swing.JFrame {
 
     Drinks drinks;
@@ -140,7 +137,7 @@ public class addDrinksFrame extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(10, 55, 254, 149);
+        jPanel2.setBounds(10, 55, 263, 157);
 
         jButton1.setBackground(new java.awt.Color(255, 190, 108));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N

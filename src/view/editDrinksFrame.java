@@ -9,10 +9,7 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import model.Drinks;
 import service.DrinksService;
-/**
- *
- * @author SON.TH183823
- */
+
 public class editDrinksFrame extends javax.swing.JFrame {
 
     /**
@@ -147,7 +144,7 @@ public class editDrinksFrame extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(17, 63, 260, 149);
+        jPanel2.setBounds(17, 63, 260, 157);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(10, 35, 280, 10);
 

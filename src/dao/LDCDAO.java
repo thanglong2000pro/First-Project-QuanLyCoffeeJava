@@ -18,10 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.LDC;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class LDCDAO {
     public void addListChoice(LDC ldc) {
         try {

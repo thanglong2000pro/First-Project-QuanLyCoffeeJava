@@ -9,10 +9,7 @@ import dao.BillDAO;
 import java.util.List;
 import model.Bill;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class BillService {
     private BillDAO billDAO = new BillDAO();
     public  List<Bill> getAllBills(){

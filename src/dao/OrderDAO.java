@@ -16,10 +16,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author SON.TH183823
- */
+
 public class OrderDAO {
 
     public List<Order> getAllOrder() {
