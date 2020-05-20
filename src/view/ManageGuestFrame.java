@@ -41,23 +41,32 @@ public class ManageGuestFrame extends javax.swing.JFrame {
         searchGuestButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         GuestTable1 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
         eidtButton = new javax.swing.JButton();
         removeButton = new javax.swing.JButton();
         refeshButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Quản Lý Khách Hàng");
+        setTitle("Quản Lý Bán Hàng");
         setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(685, 350));
+        getContentPane().setLayout(null);
 
+        backButton.setBackground(new java.awt.Color(255, 190, 108));
+        backButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        backButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Back.png"))); // NOI18N
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(backButton);
+        backButton.setBounds(0, 0, 90, 30);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 216, 148));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel2.setText("Tên Khách Hàng");
@@ -68,6 +77,8 @@ public class ManageGuestFrame extends javax.swing.JFrame {
             }
         });
 
+        searchGuestButton.setBackground(new java.awt.Color(255, 190, 108));
+        searchGuestButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/search.png"))); // NOI18N
         searchGuestButton.setText("Tìm Kiếm");
         searchGuestButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +91,7 @@ public class ManageGuestFrame extends javax.swing.JFrame {
             }
         });
 
+        GuestTable1.setBackground(new java.awt.Color(255, 216, 148));
         GuestTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -116,44 +128,10 @@ public class ManageGuestFrame extends javax.swing.JFrame {
             GuestTable1.getColumnModel().getColumn(2).setMaxWidth(120);
         }
 
-        eidtButton.setText("Sửa");
-        eidtButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eidtButtonActionPerformed(evt);
-            }
-        });
-
-        removeButton.setText("Xóa");
-        removeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                removeButtonActionPerformed(evt);
-            }
-        });
-
-        refeshButton.setText("Refresh");
-        refeshButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refeshButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(eidtButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(refeshButton, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(removeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(jLabel2)
@@ -162,6 +140,7 @@ public class ManageGuestFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(searchGuestButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 472, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,45 +151,58 @@ public class ManageGuestFrame extends javax.swing.JFrame {
                     .addComponent(searchGuestTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchGuestButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(eidtButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(removeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                        .addComponent(refeshButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(10, 64, 476, 240);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Quản Lý Khách Hàng");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(220, 0, 270, 39);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(backButton)
-                        .addGap(124, 124, 124)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backButton)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        eidtButton.setBackground(new java.awt.Color(255, 190, 108));
+        eidtButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        eidtButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/edit.png"))); // NOI18N
+        eidtButton.setText("Sửa");
+        eidtButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eidtButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(eidtButton);
+        eidtButton.setBounds(508, 70, 150, 56);
+
+        removeButton.setBackground(new java.awt.Color(255, 190, 108));
+        removeButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        removeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/xoato.png"))); // NOI18N
+        removeButton.setText("Xóa");
+        removeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(removeButton);
+        removeButton.setBounds(508, 160, 150, 57);
+
+        refeshButton.setBackground(new java.awt.Color(255, 190, 108));
+        refeshButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        refeshButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/refresh1.png"))); // NOI18N
+        refeshButton.setText("Refresh");
+        refeshButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                refeshButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(refeshButton);
+        refeshButton.setBounds(504, 247, 150, 57);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(0, 40, 670, 10);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anhgo.jpg"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 680, 320);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -311,8 +303,10 @@ public class ManageGuestFrame extends javax.swing.JFrame {
     private javax.swing.JButton eidtButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton refeshButton;
     private javax.swing.JButton removeButton;
     private javax.swing.JButton searchGuestButton;

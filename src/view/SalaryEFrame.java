@@ -11,7 +11,10 @@ import javax.swing.table.DefaultTableModel;
 import model.User;
 import service.UserService;
 
-
+/**
+ *
+ * @author SON.TH183823
+ */
 public class SalaryEFrame extends javax.swing.JFrame {
     DefaultTableModel defaultTableModel;
     UserService userService;
@@ -63,22 +66,35 @@ public class SalaryEFrame extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         IDuserTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Quản Lý Nhân Viên");
+        setTitle("Quản Lý Bán Hàng");
+        setPreferredSize(new java.awt.Dimension(735, 390));
+        getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Quản Lý Lương Nhân Viên");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(211, 0, 370, 46);
 
+        BackButton.setBackground(new java.awt.Color(255, 190, 108));
+        BackButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        BackButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Back.png"))); // NOI18N
         BackButton.setText("Back");
         BackButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BackButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(BackButton);
+        BackButton.setBounds(0, 0, 100, 33);
 
+        jPanel1.setBackground(new java.awt.Color(255, 216, 148));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        SalaryETable.setBackground(new java.awt.Color(255, 216, 148));
+        SalaryETable.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         SalaryETable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -117,7 +133,12 @@ public class SalaryEFrame extends javax.swing.JFrame {
         }
 
         fullNameTextField.setEditable(false);
+        fullNameTextField.setBackground(new java.awt.Color(255, 190, 108));
+        fullNameTextField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
+        EditButton.setBackground(new java.awt.Color(255, 190, 108));
+        EditButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        EditButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/edit.png"))); // NOI18N
         EditButton.setText("Sửa");
         EditButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,15 +146,19 @@ public class SalaryEFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Họ Tên");
 
         IDuserTextField.setEditable(false);
+        IDuserTextField.setBackground(new java.awt.Color(255, 190, 108));
+        IDuserTextField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         IDuserTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IDuserTextFieldActionPerformed(evt);
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Mã NV");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -150,8 +175,8 @@ public class SalaryEFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(fullNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(EditButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)
+                .addComponent(EditButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 696, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,34 +189,16 @@ public class SalaryEFrame extends javax.swing.JFrame {
                     .addComponent(fullNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(EditButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(BackButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BackButton)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(10, 52, 700, 280);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anhgo.jpg"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, 0, 730, 370);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -235,6 +242,7 @@ public class SalaryEFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables

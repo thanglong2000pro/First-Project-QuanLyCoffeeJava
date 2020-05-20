@@ -13,7 +13,10 @@ import model.User;
 import service.DrinksService;
 import service.UserService;
 
-
+/**
+ *
+ * @author SON.TH183823
+ */
 public class ManageDrinksFrame extends javax.swing.JFrame {
 
     /**
@@ -53,22 +56,26 @@ public class ManageDrinksFrame extends javax.swing.JFrame {
         searchGoodsButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         DrinksTable1 = new javax.swing.JTable();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         addDrinks = new javax.swing.JButton();
         editDrinks = new javax.swing.JButton();
         removeDrinksButton = new javax.swing.JButton();
         refeshButton6 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         jButton3.setText("jButton3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Quản lý Đồ uống");
+        setTitle("Quản Lý Bán Hàng");
+        setPreferredSize(new java.awt.Dimension(655, 365));
+        getContentPane().setLayout(null);
 
+        jPanel2.setBackground(new java.awt.Color(255, 216, 148));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setText("Tên Đồ Uống");
 
         searchGoodsTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -77,6 +84,8 @@ public class ManageDrinksFrame extends javax.swing.JFrame {
             }
         });
 
+        searchGoodsButton.setBackground(new java.awt.Color(255, 190, 108));
+        searchGoodsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/search.png"))); // NOI18N
         searchGoodsButton.setText("Tìm Kiếm");
         searchGoodsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +98,7 @@ public class ManageDrinksFrame extends javax.swing.JFrame {
             }
         });
 
+        DrinksTable1.setBackground(new java.awt.Color(255, 216, 148));
         DrinksTable1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         DrinksTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -136,7 +146,9 @@ public class ManageDrinksFrame extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(searchGoodsButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,105 +159,83 @@ public class ManageDrinksFrame extends javax.swing.JFrame {
                     .addComponent(searchGoodsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchGoodsButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        jLabel1.setText("Quản Lý Đồ Uống");
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(20, 50, 460, 264);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(484, 47, 150, 14);
 
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jButton1))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
+        addDrinks.setBackground(new java.awt.Color(255, 190, 108));
+        addDrinks.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        addDrinks.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/add.png"))); // NOI18N
         addDrinks.setText("Thêm");
         addDrinks.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addDrinksActionPerformed(evt);
             }
         });
+        getContentPane().add(addDrinks);
+        addDrinks.setBounds(490, 67, 132, 41);
 
+        editDrinks.setBackground(new java.awt.Color(255, 190, 108));
+        editDrinks.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        editDrinks.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/edit.png"))); // NOI18N
         editDrinks.setText("Sửa");
         editDrinks.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editDrinksActionPerformed(evt);
             }
         });
+        getContentPane().add(editDrinks);
+        editDrinks.setBounds(490, 134, 132, 44);
 
+        removeDrinksButton.setBackground(new java.awt.Color(255, 190, 108));
+        removeDrinksButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        removeDrinksButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/xoa.png"))); // NOI18N
         removeDrinksButton.setText("Xóa");
         removeDrinksButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 removeDrinksButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(removeDrinksButton);
+        removeDrinksButton.setBounds(490, 196, 132, 47);
 
+        refeshButton6.setBackground(new java.awt.Color(255, 190, 108));
+        refeshButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        refeshButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/refresh1.png"))); // NOI18N
         refeshButton6.setText("Refresh");
         refeshButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refeshButton6ActionPerformed(evt);
             }
         });
+        getContentPane().add(refeshButton6);
+        refeshButton6.setBounds(490, 270, 132, 41);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(refeshButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
-                            .addComponent(removeDrinksButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(editDrinks, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(addDrinks, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(22, 22, 22))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(addDrinks, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                        .addComponent(editDrinks, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(removeDrinksButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addComponent(refeshButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Quản Lý Đồ Uống");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(220, 0, 250, 29);
+
+        jButton1.setBackground(new java.awt.Color(255, 190, 108));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Back.png"))); // NOI18N
+        jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(0, 0, 90, 30);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anhgo.jpg"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 660, 340);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -310,7 +300,7 @@ public class ManageDrinksFrame extends javax.swing.JFrame {
                 defaultTableModel.setRowCount(0);
                 List<Drinks> listD  = drinksService.getAllDrinks();
         listD.forEach((d) -> {
-            defaultTableModel.addRow(new Object[]{d.getIDdrinks(), d.getName(), d.getPrice()});
+            defaultTableModel.addRow(new Object[]{d.getIDdrinks(), d.getName(), d.getPrice()+"đ"});
         });
                 JOptionPane.showMessageDialog(ManageDrinksFrame.this, "Xóa thành công");
             }
@@ -346,7 +336,7 @@ public class ManageDrinksFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;

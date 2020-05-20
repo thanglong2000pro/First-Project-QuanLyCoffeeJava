@@ -8,7 +8,10 @@ import javax.swing.JTextField;
 import model.User;
 import service.UserService;
 
-
+/**
+ *
+ * @author SON.TH183823
+ */
 public class addUserFrame extends javax.swing.JFrame {
 
     User user;
@@ -80,31 +83,47 @@ public class addUserFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel12 = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Quản Lý User");
+        setTitle("Quản Lý Bán Hàng");
         setLocationByPlatform(true);
+        setPreferredSize(new java.awt.Dimension(545, 355));
+        getContentPane().setLayout(null);
 
+        BackButton.setBackground(new java.awt.Color(255, 190, 108));
+        BackButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        BackButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Back.png"))); // NOI18N
         BackButton.setText("Back");
         BackButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BackButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(BackButton);
+        BackButton.setBounds(0, 0, 100, 33);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Thêm User");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(180, 0, 207, 38);
 
+        addEmployeeButton.setBackground(new java.awt.Color(255, 190, 108));
         addEmployeeButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        addEmployeeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/ok.png"))); // NOI18N
         addEmployeeButton.setText("Lưu");
         addEmployeeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addEmployeeButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(addEmployeeButton);
+        addEmployeeButton.setBounds(203, 279, 84, 32);
 
+        jPanel1.setBackground(new java.awt.Color(255, 216, 148));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel9.setText("UserName");
@@ -125,6 +144,7 @@ public class addUserFrame extends javax.swing.JFrame {
 
         jLabel11.setText("Vai Trò");
 
+        AdminRadiobutton.setBackground(new java.awt.Color(255, 216, 148));
         buttonGroup1.add(AdminRadiobutton);
         AdminRadiobutton.setText("Admin");
         AdminRadiobutton.addActionListener(new java.awt.event.ActionListener() {
@@ -134,16 +154,19 @@ public class addUserFrame extends javax.swing.JFrame {
         });
 
         IDEtextField.setEditable(false);
+        IDEtextField.setBackground(new java.awt.Color(255, 190, 108));
         IDEtextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IDEtextFieldActionPerformed(evt);
             }
         });
 
+        EmployeeRadioButton.setBackground(new java.awt.Color(255, 216, 148));
         buttonGroup1.add(EmployeeRadioButton);
         EmployeeRadioButton.setSelected(true);
         EmployeeRadioButton.setText("Employee");
 
+        genderComboBox.setBackground(new java.awt.Color(255, 190, 108));
         genderComboBox.setMaximumRowCount(3);
         genderComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ", "Khác", " " }));
         genderComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -256,36 +279,14 @@ public class addUserFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(BackButton)
-                        .addGap(148, 148, 148)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(203, 203, 203)
-                        .addComponent(addEmployeeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BackButton)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(addEmployeeButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(10, 48, 501, 220);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(100, 32, 340, 10);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anhgo.jpg"))); // NOI18N
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(0, 0, 530, 340);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -378,6 +379,7 @@ public class addUserFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -387,6 +389,7 @@ public class addUserFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField passwordTextField;
     private javax.swing.JTextField phoneTextField;
     private javax.swing.JTextField userNameTextField;

@@ -11,7 +11,10 @@ import javax.swing.JOptionPane;
 import model.User;
 import service.UserService;
 
-
+/**
+ *
+ * @author SON.TH183823
+ */
 public class editTaiKhoanFrame extends javax.swing.JFrame {
 
     User user;
@@ -60,10 +63,14 @@ public class editTaiKhoanFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         HuyButton = new javax.swing.JButton();
         OKButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Quản Lý Bán Hàng");
+        setPreferredSize(new java.awt.Dimension(430, 275));
+        getContentPane().setLayout(null);
 
+        jPanel1.setBackground(new java.awt.Color(255, 216, 148));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel5.setText("Giới tính");
@@ -88,9 +95,11 @@ public class editTaiKhoanFrame extends javax.swing.JFrame {
             }
         });
 
+        NamRadioButton.setBackground(new java.awt.Color(255, 216, 148));
         buttonGroup1.add(NamRadioButton);
         NamRadioButton.setText("Nam");
 
+        NuRadioButton.setBackground(new java.awt.Color(255, 216, 148));
         buttonGroup1.add(NuRadioButton);
         NuRadioButton.setText("Nữ");
         NuRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +108,7 @@ public class editTaiKhoanFrame extends javax.swing.JFrame {
             }
         });
 
+        KhacRadioButton.setBackground(new java.awt.Color(255, 216, 148));
         buttonGroup1.add(KhacRadioButton);
         KhacRadioButton.setText("Khác");
 
@@ -119,20 +129,19 @@ public class editTaiKhoanFrame extends javax.swing.JFrame {
                         .addComponent(addressTextField))
                     .addComponent(FullNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(PhoneTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
+                        .addComponent(PhoneTextField))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(NamRadioButton)
                             .addComponent(NuRadioButton)
-                            .addComponent(KhacRadioButton))
-                        .addGap(28, 28, 28))))
+                            .addComponent(KhacRadioButton))))
+                .addGap(28, 28, 28))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,53 +172,41 @@ public class editTaiKhoanFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Sửa thông tin");
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(24, 34, 367, 160);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Sửa thông tin");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(143, 0, 277, 30);
+
+        HuyButton.setBackground(new java.awt.Color(255, 190, 108));
+        HuyButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        HuyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/huy.png"))); // NOI18N
         HuyButton.setText("Hủy");
         HuyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HuyButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(HuyButton);
+        HuyButton.setBounds(70, 200, 90, 30);
 
+        OKButton.setBackground(new java.awt.Color(255, 190, 108));
+        OKButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        OKButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/ok.png"))); // NOI18N
         OKButton.setText("Ok");
         OKButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OKButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(OKButton);
+        OKButton.setBounds(250, 200, 90, 30);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addComponent(HuyButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(OKButton, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(84, 84, 84))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(OKButton)
-                    .addComponent(HuyButton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anhgo.jpg"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 430, 250);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -302,6 +299,7 @@ public class editTaiKhoanFrame extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField dobTextField;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

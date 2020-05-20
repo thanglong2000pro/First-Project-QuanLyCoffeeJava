@@ -9,7 +9,10 @@ import model.User;
 import service.GoodsService;
 import service.UserService;
 
-
+/**
+ *
+ * @author SON.TH183823
+ */
 public class ManageGoodsFrame extends javax.swing.JFrame {
     Goods goods;
     GoodsService goodsService;
@@ -43,9 +46,6 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         searchGoodsTextField = new javax.swing.JTextField();
@@ -56,6 +56,9 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
         removeGoodsButton4 = new javax.swing.JButton();
         editGoodsButton3 = new javax.swing.JButton();
         addGoodsButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         jInternalFrame1.setVisible(true);
 
@@ -71,46 +74,25 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Quản lý Hàng hóa");
+        setTitle("Quản Lý Bán Hàng");
+        setPreferredSize(new java.awt.Dimension(720, 435));
+        getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        jLabel1.setText("Quản Lý Hàng Hóa");
-
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jButton1))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
+        jPanel2.setBackground(new java.awt.Color(255, 216, 148));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Tên Hàng Hóa");
 
+        searchGoodsTextField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         searchGoodsTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchGoodsTextFieldActionPerformed(evt);
             }
         });
 
+        searchGoodsButton.setBackground(new java.awt.Color(255, 190, 108));
+        searchGoodsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/search.png"))); // NOI18N
         searchGoodsButton.setText("Tìm Kiếm");
         searchGoodsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +105,7 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
             }
         });
 
+        GoodsTable1.setBackground(new java.awt.Color(255, 216, 148));
         GoodsTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -174,10 +157,10 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(searchGoodsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
                 .addComponent(searchGoodsButton)
-                .addContainerGap(72, Short.MAX_VALUE))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 666, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,70 +171,80 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
                     .addComponent(searchGoodsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchGoodsButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(20, 40, 670, 290);
+
+        RefeshButton5.setBackground(new java.awt.Color(255, 190, 108));
+        RefeshButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        RefeshButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/refresh1.png"))); // NOI18N
         RefeshButton5.setText("Refresh");
         RefeshButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RefeshButton5ActionPerformed(evt);
             }
         });
+        getContentPane().add(RefeshButton5);
+        RefeshButton5.setBounds(580, 350, 110, 39);
 
+        removeGoodsButton4.setBackground(new java.awt.Color(255, 190, 108));
+        removeGoodsButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        removeGoodsButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/xoa.png"))); // NOI18N
         removeGoodsButton4.setText("Xóa");
         removeGoodsButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 removeGoodsButton4ActionPerformed(evt);
             }
         });
+        getContentPane().add(removeGoodsButton4);
+        removeGoodsButton4.setBounds(390, 350, 90, 39);
 
+        editGoodsButton3.setBackground(new java.awt.Color(255, 190, 108));
+        editGoodsButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        editGoodsButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/edit.png"))); // NOI18N
         editGoodsButton3.setText("Sửa");
         editGoodsButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editGoodsButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(editGoodsButton3);
+        editGoodsButton3.setBounds(200, 350, 90, 39);
 
+        addGoodsButton.setBackground(new java.awt.Color(255, 190, 108));
+        addGoodsButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        addGoodsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/add.png"))); // NOI18N
         addGoodsButton.setText("Thêm");
         addGoodsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addGoodsButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(addGoodsButton);
+        addGoodsButton.setBounds(20, 350, 90, 39);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(addGoodsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(96, 96, 96)
-                        .addComponent(removeGoodsButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(editGoodsButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(92, 92, 92)
-                        .addComponent(RefeshButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(addGoodsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(RefeshButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(removeGoodsButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(editGoodsButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Quản Lý Hàng Hóa");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(216, 0, 228, 29);
+
+        jButton1.setBackground(new java.awt.Color(255, 190, 108));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Back.png"))); // NOI18N
+        jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(0, 0, 100, 33);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anhgo.jpg"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 720, 410);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -369,7 +362,7 @@ public class ManageGoodsFrame extends javax.swing.JFrame {
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton removeGoodsButton4;
